@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 998744832}
-  sceleton: {fileID: 7018684992126966254, guid: ce666d8cdd0802b4c841e57454e2691f, type: 3}
+  sceleton: {fileID: 9183503455091608290, guid: d68d793e9943f2a4c936333e6ffbca89, type: 3}
   enemyTag: Skeleton
   minEnemyCount: 2
   interval: 2
@@ -4349,7 +4349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1ab4234afc0f48ba2b5ed942a813d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 8930385235314952411, guid: 0b3bdb0d92a9bce408731ee9a548b3b0, type: 3}
 --- !u!1 &1943107147
 GameObject:
   m_ObjectHideFlags: 0
