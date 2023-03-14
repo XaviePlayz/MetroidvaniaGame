@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
@@ -12,7 +13,8 @@ public class EnemyAttack : MonoBehaviour
     private float attackSpeed;
     [SerializeField]
     private float canAttack;
-
+    [SerializeField]
+    private Animator anim;
 
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -23,18 +25,20 @@ public class EnemyAttack : MonoBehaviour
             {
                 collision.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
                 canAttack = 0;
+                StartCoroutine(WaitForSec());
             }
             else
             {
                 canAttack += Time.deltaTime;
             }
         }
-        StartCoroutine(WaitForSec());
     }
     private IEnumerator WaitForSec()
     {
-        gameObject.GetComponent<EnemyMovement>().enabled = false;
+        anim.SetBool("Attack", true);
+        gameObject.GetComponent<EnemyMovement>().speed = 0;
         yield return new WaitForSeconds(2f);
-        gameObject.GetComponent<EnemyMovement>().enabled = true;
+        gameObject.GetComponent<EnemyMovement>().speed = 3;
+        anim.SetBool("Attack", false);
     }
 }

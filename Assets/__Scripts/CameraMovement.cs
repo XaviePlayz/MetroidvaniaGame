@@ -6,6 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private float currentPosX;
+    private float currentPosY;
     private Vector3 velocity = Vector3.zero;
 
     //Follow player
@@ -17,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     private void Update()
     {
         //Room camera
-        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosX, transform.position.y, transform.position.z), ref velocity, speed);
+        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosX, currentPosY, transform.position.z), ref velocity, speed);
 
         //Follow player
         //transform.position = new Vector3(player.position.x + lookAhead, transform.position.y, transform.position.z);
@@ -27,5 +28,6 @@ public class CameraMovement : MonoBehaviour
     public void MoveToNewRoom(Transform _newRoom)
     {
         currentPosX = _newRoom.position.x;
+        currentPosY = _newRoom.position.y;
     }
 }
