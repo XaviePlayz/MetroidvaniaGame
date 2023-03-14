@@ -24,4 +24,9 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
