@@ -6,6 +6,10 @@ TagManager:
   tags:
   - MainCanvas
   - Skeleton
+  - Room1
+  - Door
+  - Floor
+  - Sky
   layers:
   - Default
   - TransparentFX
