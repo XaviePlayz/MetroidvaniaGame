@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -16,14 +17,18 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(target.position);
-        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
-
-
         if (Vector3.Distance(transform.position, target.position) > 2f)
         {
-            transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
 
+        if(transform.position.x < target.position.x)
+        {
+            transform.localScale = new Vector3(-7, 7, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(7, 7, 1);
+        }
     }
 }

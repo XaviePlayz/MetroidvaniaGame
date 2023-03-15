@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
             float positionX = Random.Range(minXPosition, maxXPosition);
             if (player.transform.position.x == positionX)
             {
-                positionX += 1f;            
+                positionX += 2f;            
             }
             GameObject newEnemy = Instantiate(sceleton, new Vector3(positionX, -5.31f, 0), Quaternion.identity);
             newEnemy.GetComponent<EnemyMovement>().target = player.transform;
