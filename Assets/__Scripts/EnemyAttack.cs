@@ -23,7 +23,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (attackSpeed <= canAttack)
             {
-                collision.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                collision.gameObject.GetComponent<PlayerHealth>().UpdateHealth(attackDamage);
                 canAttack = 0;
                 StartCoroutine(WaitForSec());
             }

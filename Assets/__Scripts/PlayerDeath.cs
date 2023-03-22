@@ -18,6 +18,11 @@ public class PlayerDeath : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player.transform.position = new Vector2(-15.71f, -5.31f);
+            var playerhealth = collision.collider.GetComponent<PlayerHealth>();
+            if (playerhealth)
+            {
+                playerhealth.UpdateHealth(50);
+            }
         }
 
         if (collision.gameObject.tag == "Skeleton")

@@ -7,7 +7,7 @@ public class HealthBarBehaviour : MonoBehaviour
     public Color High;
     public Vector3 Offset;
 
-    public void SetHealth(float health, float maxHealth)
+    public void SetEnemyHealth(float health, float maxHealth)
     {
         Slider.gameObject.SetActive(health < maxHealth);
         Slider.value = health;
