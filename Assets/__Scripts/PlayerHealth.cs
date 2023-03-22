@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float health;
-    [SerializeField]
-    private float maxHealth = 100f;
+    public float hitPoints;
+    public float maxHitPoints = 100;
+    public PlayerHealthBarBehaviour Healthbar;
+    public GameObject gameOverScreen;
+    public Transform canvas;
+
 
     private void Start()
     {
-        health = maxHealth;
+        hitPoints = maxHitPoints;
+        Healthbar.SetPlayerHealth(hitPoints, maxHitPoints);
     }
 
-    public void UpdateHealth(float mod)
-    {
-        health += mod;
 
-        if (health > maxHealth)
+    public void UpdateHealth(float damage)
+    {
+        hitPoints -= damage;
+        Healthbar.SetPlayerHealth(hitPoints, maxHitPoints);
+
+        if (hitPoints <= 0)
         {
-            health = maxHealth;
-        }
-        else if (health <= 0)
-        {
-            health = 0f;
+            gameOverScreen.SetActive(true);
+            //Instantiate(gameOverScreen, canvas, true);
         }
     }
 }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collider)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.gameObject.tag == "Skeleton")
+        if (collision.gameObject.tag == "Skeleton")
         {
-            Destroy(collider.gameObject);
+            var enemy = collision.collider.GetComponent<EnemyBehaviour>();
+            if (enemy)
+            {
+                enemy.TakeHit(1);
+            }
         }
     }
 }

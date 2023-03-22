@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,55 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: ui_big_pieces_13
-      rect:
-        serializedVersion: 2
-        x: 719
-        y: 150
-        width: 129
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25.5, y: -64}
-        - {x: -64.5, y: -64}
-        - {x: -64.5, y: 64}
-        - {x: 64.5, y: 64}
-        - {x: 64.5, y: -35}
-        - {x: 44.5, y: -48}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ab96cbd1ca939d4d9de6472e0232ad5
-      internalID: -1459877954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui_big_pieces_0
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 443
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f565d3341b41ec343afd8d507761ab03
-      internalID: -493918478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -174,21 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ui_big_pieces_11: 1751639563
-      ui_big_pieces_8: 1108999970
-      ui_big_pieces_4: 1513687888
-      ui_big_pieces_9: -612720057
-      ui_big_pieces_6: -1042885763
-      ui_big_pieces_13: -1459877954
-      ui_big_pieces_2: -1535632965
-      ui_big_pieces_0: -493918478
-      ui_big_pieces_3: -1741866054
-      ui_big_pieces_7: -141948713
-      ui_big_pieces_5: 715935894
-      ui_big_pieces_1: -1803126692
-      ui_big_pieces_10: -21385692
-      ui_big_pieces_12: 1427868796
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
