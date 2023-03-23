@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+
     }
 
     void Update()
@@ -21,8 +22,11 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
-
-        if(transform.position.x < target.position.x)
+        if (Vector3.Distance(transform.position, target.position) == 2.5f)
+        {
+            target.GetComponent<PlayerHealth>().UpdateHealth(10f);
+        }
+        if (transform.position.x < target.position.x)
         {
             transform.localScale = new Vector3(-7, 7, 1);
         }
