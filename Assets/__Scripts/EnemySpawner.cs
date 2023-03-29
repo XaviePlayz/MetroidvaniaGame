@@ -18,14 +18,16 @@ public class EnemySpawner : MonoBehaviour
     private float minXPosition;
     [SerializeField]
     private float maxXPosition;
+    [SerializeField]
+    private float maxEnemyCount;
 
 
 
     void Start()
     {
         StartCoroutine(spawnEnemy());
-    }
 
+    }
 
 
 
@@ -33,16 +35,20 @@ public class EnemySpawner : MonoBehaviour
     {
 
         yield return new WaitForSeconds(interval);
-        if (GameObject.FindGameObjectsWithTag(enemyTag).Length <= minEnemyCount)
+        if (maxEnemyCount > 0)
         {
-            float positionX = Random.Range(minXPosition, maxXPosition);
-            if (player.transform.position.x == positionX)
+            if (GameObject.FindGameObjectsWithTag(enemyTag).Length <= minEnemyCount)
             {
-                positionX += 2f;            
+                float positionX = Random.Range(minXPosition, maxXPosition);
+                if (player.transform.position.x == positionX)
+                {
+                    positionX += 2f;
+                }
+                GameObject newEnemy = Instantiate(sceleton, new Vector3(positionX, -5.31f, 0), Quaternion.identity);
+                newEnemy.GetComponent<EnemyMovement>().target = player.transform;
             }
-            GameObject newEnemy = Instantiate(sceleton, new Vector3(positionX, -5.31f, 0), Quaternion.identity);
-            newEnemy.GetComponent<EnemyMovement>().target = player.transform;
+            StartCoroutine(spawnEnemy());
+            maxEnemyCount--;
         }
-        StartCoroutine(spawnEnemy());
     }
 }
