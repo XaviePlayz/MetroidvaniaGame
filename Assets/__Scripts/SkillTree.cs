@@ -24,6 +24,7 @@ public class SkillTree : MonoBehaviour
         {
             big1.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             big1.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            small1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }
