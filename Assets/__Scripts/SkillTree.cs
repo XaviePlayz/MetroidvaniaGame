@@ -21,7 +21,8 @@ public class SkillTree : MonoBehaviour
     void TaskOnBigClick(string name)
     {
         if (name == "big1"){
-            Debug.Log("test");
+            big1.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            big1.gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
     }
 }
