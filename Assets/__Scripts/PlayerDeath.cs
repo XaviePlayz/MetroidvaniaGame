@@ -24,14 +24,5 @@ public class PlayerDeath : MonoBehaviour
                 playerhealth.UpdateHealth(50);
             }
         }
-
-        if (collision.gameObject.tag == "Skeleton")
-        {
-            var enemy = collision.collider.GetComponent<EnemyBehaviour>();
-            if (enemy)
-            {
-                enemy.Die();
-            }
-        }
     }
 }

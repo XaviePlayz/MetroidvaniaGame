@@ -9,7 +9,8 @@ public class PlayerAttack : MonoBehaviour
     public GameObject attackArea;
 
     private bool Attacked = false;
-    private int timeOutAttack = 0;
+    public float attackRate = 0.5F;
+    private float nextAttack = 0.0F;
 
 
     void Start()
@@ -24,19 +25,19 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextAttack)
         {
+            nextAttack = Time.time + attackRate;
             Attacked = true;
 
             attackArea.SetActive(true);
             anim.SetBool("Attack", true);
-            timeOutAttack = 1;
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             attackArea.SetActive(false);
         }
-        else if (timeOutAttack == 1)
+        else
         {
             anim.SetBool("Attack", false);
         }
