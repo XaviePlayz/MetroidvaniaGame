@@ -10,7 +10,7 @@ public class SkillTree : MonoBehaviour
 
     void Start()
     {
-        big1.onClick.AddListener(delegate {TaskOnBigClick("big1");});
+        big1.onClick.AddListener(delegate {TaskOnBigClick("Increase_Max_HP");});
     }
 
     void TaskOnSmallClick()
@@ -20,7 +20,8 @@ public class SkillTree : MonoBehaviour
 
     void TaskOnBigClick(string name)
     {
-        if (name == "big1"){
+        if (name == "Increase_Max_HP")
+        {
             big1.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             big1.gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
