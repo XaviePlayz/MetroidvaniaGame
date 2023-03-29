@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
         }
 
         Flip();
+        ChckHelth();
     }
 
     private void FixedUpdate()
@@ -49,6 +50,15 @@ public class Movement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    private void ChckHelth()
+    {
+        if (gameObject.transform.position.y < -28)
+        {
+            gameObject.transform.position = new Vector2(-15.71f, -5.31f);
+            gameObject.GetComponent<PlayerHealth>().UpdateHealth(50);
         }
     }
 }

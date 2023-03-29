@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
 {
 
     public Transform target;
-    public float speed = 3f;
+    public float speed = 2f;
 
 
     void Start()
@@ -33,6 +33,11 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(7, 7, 1);
+        }
+
+        if((gameObject.transform.position.y < -40f && gameObject.transform.position.y > -43f) || (gameObject.transform.position.y < -11f && gameObject.transform.position.y > -14f))
+        {
+            Destroy(this.gameObject);
         }
     }
 }

@@ -4292,7 +4292,7 @@ GameObject:
   - component: {fileID: 1710724433}
   m_Layer: 0
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: EnemyDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4331,7 +4331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710724430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.61, y: -11.93, z: 0}
+  m_LocalPosition: {x: -3.61, y: -13.23, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4595,6 +4595,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8930385235314952402, guid: 0b3bdb0d92a9bce408731ee9a548b3b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8930385235314952410, guid: 0b3bdb0d92a9bce408731ee9a548b3b0, type: 3}
       propertyPath: m_Material
       value: 
