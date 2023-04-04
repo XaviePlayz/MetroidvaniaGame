@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 2167704132544331359}
   - component: {fileID: 4928132623703224564}
   m_Layer: 0
-  m_Name: skeleton-1
+  m_Name: Boss-Skeleton
   m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 9183503455091608290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.02, y: -5.65, z: 0}
-  m_LocalScale: {x: -7, y: 7, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2167704131847485970}
@@ -535,7 +535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004147794, y: -0.054687154}
+  m_Offset: {x: 0.004147794, y: -0.125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed3891792dc3bb4ca009a9fa6b9c36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 15
   attackSpeed: 2
   canAttack: 0
   anim: {fileID: 9183503455091608294}
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d28d239b167b14999e66cde308063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 2
-  maxHitPoints: 2
+  hitPoints: 25
+  maxHitPoints: 25
   Healthbar: {fileID: 1377178607550545910}
 --- !u!50 &4928132623703224564
 Rigidbody2D:
