@@ -7,10 +7,19 @@ public class SkillTree : MonoBehaviour
 {
     public int points = 0;
     public Button big1, big2, big3, big4, small1, small2, small3, small4, small5, small6, small7, small8;
+    public Image skillTree;
 
     void Start()
     {
         big1.onClick.AddListener(delegate {TaskOnBigClick("Increase_Max_HP");});
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            skillTree.gameObject.SetActive(true);
+        }
     }
 
     void TaskOnSmallClick()
