@@ -17,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
         Healthbar.SetPlayerHealth(hitPoints, maxHitPoints);
     }
 
-
     public void UpdateHealth(float damage)
     {
         hitPoints -= damage;
