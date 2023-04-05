@@ -39,16 +39,16 @@ public class EnemySpawner : MonoBehaviour
         {
             if (GameObject.FindGameObjectsWithTag(enemyTag).Length <= minEnemyCount)
             {
-                float positionX = Random.Range(minXPosition, maxXPosition);
+                //float positionX = Random.Range(minXPosition, maxXPosition);
                 if (player.transform.position.x >= minXPosition - 2 || player.transform.position.x <= maxXPosition + 2)
                 {
-                    positionX += 2f;
+                    //positionX += 2f;
                     _spawnEnemy = true;
                 }
 
                 if (_spawnEnemy == true)
                 {
-                    GameObject newEnemy = Instantiate(sceleton, new Vector3(positionX, -5.31f, 0), Quaternion.identity);
+                    GameObject newEnemy = Instantiate(sceleton, new Vector3(0, -5.31f, 0), Quaternion.identity);
                     newEnemy.GetComponent<EnemyMovement>().target = player.transform;
                 }
                 else

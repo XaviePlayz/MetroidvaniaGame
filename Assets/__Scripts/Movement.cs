@@ -13,10 +13,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private GameObject skillTree;  
 
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -30,6 +33,19 @@ public class Movement : MonoBehaviour
 
         Flip();
         ChckDeath();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (skillTree.activeInHierarchy)
+            {
+                skillTree.SetActive(false);
+            }
+            else
+            {
+                skillTree.SetActive(true);
+            }
+            
+        }
     }
 
     private void FixedUpdate()

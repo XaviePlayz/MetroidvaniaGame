@@ -16,17 +16,7 @@ public class SkillTree : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (!skillTree.gameObject.activeSelf)
-            {
-                skillTree.gameObject.SetActive(true);
-            }
-            else
-            {
-                skillTree.gameObject.SetActive(false);
-            }
-        }
+        
     }
 
     void TaskOnSmallClick()
