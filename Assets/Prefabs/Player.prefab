@@ -85,10 +85,10 @@ GameObject:
   - component: {fileID: 8930385235314952415}
   - component: {fileID: 8930385235314952408}
   - component: {fileID: 8930385235314952409}
-  - component: {fileID: 8930385235314952410}
   - component: {fileID: 8930385235314952412}
   - component: {fileID: 8930385235314952403}
   - component: {fileID: 8930385235314952402}
+  - component: {fileID: 461700997110190510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -203,32 +203,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &8930385235314952410
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930385235314952411}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11969948, y: -0.4122995}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.25, y: 3.6875}
-    newSize: {x: 6.25, y: 3.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6482048, y: 2.8097007}
-  m_EdgeRadius: 0
 --- !u!114 &8930385235314952412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8930385235314952403}
   attackArea: {fileID: 8930385234435918739}
+  attackRate: 0.5
 --- !u!95 &8930385235314952403
 Animator:
   serializedVersion: 4
@@ -275,7 +250,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f948613f7a553d4aa2b3eb03485b08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  hitPoints: 0
+  maxHitPoints: 100
+  Healthbar: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  canvas: {fileID: 0}
+--- !u!70 &461700997110190510
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930385235314952411}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.030587673, y: -0.4282279}
+  m_Size: {x: 1.2132196, y: 2.742607}
+  m_Direction: 0
 --- !u!1 &8930385235341531037
 GameObject:
   m_ObjectHideFlags: 0

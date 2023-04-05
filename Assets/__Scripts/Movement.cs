@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         }
 
         Flip();
-        ChckHelth();
+        ChckDeath();
     }
 
     private void FixedUpdate()
@@ -53,11 +53,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void ChckHelth()
+    private void ChckDeath()
     {
         if (gameObject.transform.position.y < -28)
         {
-            gameObject.transform.position = new Vector2(-15.71f, -5.31f);
+            gameObject.transform.position = new Vector2(-14f, -5.7f);
             gameObject.GetComponent<PlayerHealth>().UpdateHealth(50);
         }
     }

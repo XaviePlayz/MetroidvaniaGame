@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d28d239b167b14999e66cde308063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitPoints: 5
+  hitPoints: 2
+  maxHitPoints: 2
   Healthbar: {fileID: 1377178607550545910}
 --- !u!50 &4928132623703224564
 Rigidbody2D:
